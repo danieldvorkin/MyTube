@@ -1,0 +1,23 @@
+<h1>Edit Video Entry</h1>
+
+<p>
+  <%= link_to "Back", @video %>
+</p>
+
+<%= form_for @video do |y| %>
+  <p>
+    <%= y.text_field :url, placeholder: "Enter Youtube Link" %>
+  </p>
+  <p>
+    <%= y.text_field :title, placeholder: "Enter Video Title" %>
+  </p>
+  <p>
+    <%= y.text_field :publisher, placeholder: "Enter Publisher Name" %>
+  </p>
+  <p>
+    <%= y.text_field :source, placeholder: "Enter Source of Video" %>
+  </p>
+  <p>
+    <%= y.submit "Save" %>
+  </p>
+<% end %>

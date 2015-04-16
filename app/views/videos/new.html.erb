@@ -1,22 +1,18 @@
 <h1>Add a YouTube Link</h1>
-<%= form_tag "/videos" do %>
+<%= form_for @videos do |y| %>
   <p>
-    <%= label_tag :url %><br>
-    <%= text_field_tag :url %>
+    <%= y.text_field :url, placeholder: "Enter Youtube Link" %>
   </p>
   <p>
-    <%= label_tag :title%><br>
-    <%= text_field_tag :title %>
+    <%= y.text_field :title, placeholder: "Enter Video Title" %>
   </p>
   <p>
-    <%= label_tag :publisher %><br>
-    <%= text_field_tag :publisher %>
+    <%= y.text_field :publisher, placeholder: "Enter Publisher Name" %>
   </p>
   <p>
-    <%= label_tag :source %><br>
-    <%= text_field_tag :source %>
+    <%= y.text_field :source, placeholder: "Enter Source of Video" %>
   </p>
   <p>
-    <%= submit_tag "Save" %>
+    <%= y.submit "Save" %>
   </p>
 <% end %>

@@ -8,3 +8,123 @@ Migrating to CreateVideos (20150416174559)
   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150416174559"]]
   [1m[35m (1.7ms)[0m  commit transaction
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (10.8ms)[0m  [1mINSERT INTO "videos" ("publisher", "title", "url", "source", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["publisher", "TALEGAS619"], ["title", "Justice Live 2006"], ["url", "https://youtu.be/4W1S7lYo_1M"], ["source", "YouTube"], ["created_at", "2015-04-16 17:53:11.263404"], ["updated_at", "2015-04-16 17:53:11.263404"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "videos" ("publisher", "title", "url", "source", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["publisher", "TALEGAS619"], ["title", "Justice Live 2006"], ["url", "https://youtu.be/4W1S7lYo_1M"], ["source", "YouTube"], ["created_at", "2015-04-16 17:53:28.132799"], ["updated_at", "2015-04-16 17:53:28.132799"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "videos" ("publisher", "title", "url", "source", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["publisher", "Record Makers"], ["title", "Kavinsky - Nightcall"], ["url", "https://youtu.be/MV_3Dpw-BRY"], ["source", "YouTube"], ["created_at", "2015-04-16 17:53:28.138063"], ["updated_at", "2015-04-16 17:53:28.138063"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "videos" ("publisher", "title", "url", "source", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["publisher", "Drake Vevo"], ["title", "Drake - Started from the bottom"], ["url", "https://youtu.be/RubBzkZzpUA"], ["source", "YouTube"], ["created_at", "2015-04-16 17:53:28.140802"], ["updated_at", "2015-04-16 17:53:28.140802"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+
+
+Started GET "/" for ::1 at 2015-04-16 13:54:21 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/dvorkin212/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/railties-4.2.1/lib/rails/templates/rails/welcome/index.html.erb (2.2ms)
+Completed 200 OK in 74ms (Views: 56.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/videos" for ::1 at 2015-04-16 13:54:25 -0400
+Processing by VideosController#index as HTML
+  Rendered videos/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2094ms (Views: 2091.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/videos.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-16 13:54:28 -0400
+
+
+Started GET "/assets/videos.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-04-16 13:54:28 -0400
+
+
+Started GET "/videos" for ::1 at 2015-04-16 14:04:03 -0400
+Processing by VideosController#index as HTML
+  [1m[35mVideo Load (0.2ms)[0m  SELECT "videos".* FROM "videos"
+  Rendered videos/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 57ms (Views: 54.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-04-16 14:04:03 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-16 14:04:03 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-16 14:04:03 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-16 14:04:03 -0400
+
+
+Started GET "/assets/videos.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-16 14:04:03 -0400
+
+
+Started GET "/assets/videos.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-04-16 14:04:03 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-04-16 14:04:03 -0400
+
+
+Started GET "/videos" for ::1 at 2015-04-16 14:21:07 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VideosController#index as HTML
+  [1m[35mVideo Load (0.2ms)[0m  SELECT "videos".* FROM "videos"
+  Rendered videos/index.html.erb within layouts/application (97.7ms)
+Completed 500 Internal Server Error in 105ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined local variable or method `videos' for #<#<Class:0x007f8562ca7710>:0x007f8562ca6c98>):
+    2: 
+    3: <% @videos.each do |video| %>
+    4: 	<p><%= video.title %> :: Published by: <%= video.publisher %></p>
+    5: 	<iframe width="560" height="315" src="https://www.youtube.com/embed/<%= videos.youtube_id %>" frameborder="0" allowfullscreen></iframe>
+    6: <% end %>
+  app/views/videos/index.html.erb:5:in `block in _app_views_videos_index_html_erb__2262678577178521249_70105432403200'
+  app/views/videos/index.html.erb:3:in `_app_views_videos_index_html_erb__2262678577178521249_70105432403200'
+
+
+  Rendered /Users/dvorkin212/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.0ms)
+  Rendered /Users/dvorkin212/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/dvorkin212/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/dvorkin212/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (87.6ms)
+  Rendered /Users/dvorkin212/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/dvorkin212/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/dvorkin212/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/dvorkin212/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/dvorkin212/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (87.0ms)
+  Rendered /Users/dvorkin212/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/dvorkin212/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/dvorkin212/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (209.1ms)
+
+
+Started GET "/videos" for ::1 at 2015-04-16 14:21:24 -0400
+Processing by VideosController#index as HTML
+  [1m[36mVideo Load (0.2ms)[0m  [1mSELECT "videos".* FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 154ms (Views: 153.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/videos.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-16 14:21:25 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-16 14:21:25 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-04-16 14:21:25 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-16 14:21:25 -0400
+
+
+Started GET "/assets/videos.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-04-16 14:21:25 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-16 14:21:25 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-04-16 14:21:25 -0400
